@@ -31,4 +31,5 @@ set wildignore+=*/target/*
 set nu "Line numbering on by default
 set foldmethod=indent
 execute pathogen#infect()
+set foldlevelstart=20
 
