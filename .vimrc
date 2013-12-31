@@ -32,4 +32,6 @@ set nu "Line numbering on by default
 set foldmethod=indent
 execute pathogen#infect()
 set foldlevelstart=20
+autocmd vimenter * if !argc() | NERDTree | endif
+map <C-n> :NERDTreeToggle<CR>
 
