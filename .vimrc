@@ -29,5 +29,9 @@ set softtabstop=2
 let g:FindFileIgnore = ['*.o', '*.pyc', '*.class', '*/tmp/*'] 
 set wildignore+=*/target/*
 set nu "Line numbering on by default
+<<<<<<< HEAD
 set foldmethod=indent
+=======
+execute pathogen#infect()
+>>>>>>> de6d19dba637136c435aa1f7864d8a4b29f19f22
 
