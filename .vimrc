@@ -29,3 +29,5 @@ set softtabstop=2
 let g:FindFileIgnore = ['*.o', '*.pyc', '*.class', '*/tmp/*'] 
 set wildignore+=*/target/*
 set nu "Line numbering on by default
+set foldmethod=indent
+
