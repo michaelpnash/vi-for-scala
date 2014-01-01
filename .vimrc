@@ -33,4 +33,6 @@ set foldmethod=indent
 execute pathogen#infect()
 set foldlevelstart=20
 map <C-n> :NERDTreeToggle<CR>
+set incsearch
+set hlsearch
 
