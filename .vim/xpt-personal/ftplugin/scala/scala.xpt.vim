@@ -208,6 +208,18 @@ class `classname()^ extends WordSpec with Matchers {
 }
 // vim:fdl=1:
 
+XPT freespec hint=Creates\ a\ new\ FreeSpec\ test\ file
+`getPackageLine()^
+
+import org.scalatest.FreeSpec
+
+class `classname()^ extends FreeSpec {
+    "`classNameFromSpec()^" should { //{1
+        `cursor^
+    } //}1
+}
+// vim:fdl=1:
+
 XPT eorp hint=envOrNone.orElse.propOrNone
 envOrNone("`Variable^").orElse(propOrNone("`property^"))
 
