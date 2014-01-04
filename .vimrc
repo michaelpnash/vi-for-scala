@@ -31,6 +31,10 @@ set wildignore+=*/target/*,*.jar
 set nu "Line numbering on by default
 set foldmethod=indent
 execute pathogen#infect()
+filetype off
+call pathogen#incubate()
+call pathogen#helptags()
+filetype on
 set foldlevelstart=20
 map <C-n> :NERDTreeToggle<CR>
 set incsearch
@@ -80,4 +84,6 @@ au BufEnter *\(Test\)\@!.scala let b:fswitchlocs = 'reg:+/main/scala+/test/scala
 au BufEnter *Test.scala let b:fswitchlocs = 'reg:+/test/scala+/main/scala/+' | let b:fswitchfnames='/Test$//'
 
 let b:fswitchlocs = 'reg:/main/test/'
+filetype plugin on
+set runtimepath+=~/.vim/xpt-personal
 
