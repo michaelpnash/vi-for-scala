@@ -88,4 +88,5 @@ au BufEnter *Test.scala let b:fswitchlocs = 'reg:+/test/scala+/main/scala/+' | l
 let b:fswitchlocs = 'reg:/main/test/'
 filetype plugin on
 set runtimepath+=~/.vim/xpt-personal
-
+let Grep_Default_Filelist = './**/*.scala'
+nnoremap <silent> ,g :Grep<CR>
