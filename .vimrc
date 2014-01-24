@@ -90,3 +90,11 @@ filetype plugin on
 set runtimepath+=~/.vim/xpt-personal
 let Grep_Default_Filelist = './**/*.scala'
 nnoremap <silent> ,g :Grep<CR>
+
+" Unbind the cursor keys in insert, normal and visual modes.
+for prefix in ['i', 'n', 'v']
+  for key in ['<Up>', '<Down>', '<Left>', '<Right>']
+    exe prefix . "noremap " . key . " <Nop>"
+  endfor
+endfor
+
