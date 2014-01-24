@@ -1,0 +1,2 @@
+java -jar `dirname $0`/scalariform.jar +alignSingleLineCaseStatements "$@"
+
