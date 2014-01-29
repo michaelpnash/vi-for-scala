@@ -1,0 +1,222 @@
+
+Key bindings for my Vi setup for editing Scala, <a href="https://github.com/michaelpnash/vi-for-scala">available here</a>.<br>
+<br>
+<div style="text-align: center;"><span style="font-weight: bold;">Vi</span><br>
+</div>
+<table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;"><div style="text-align: center;">
+      <span style="font-weight: bold;">Buffers</span></div>
+      <table style="text-align: left; width: 100%;" title="Buffers" border="1" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">,b<br>
+            </td>
+            <td style="vertical-align: top;">Next Buffer<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">,B<br>
+            </td>
+            <td style="vertical-align: top;">Previous Buffer<br>
+            </td>
+          </tr><tr><td style="vertical-align: top;">:buffers<br></td><td style="vertical-align: top;">List all current buffers<br></td></tr>
+        </tbody>
+      </table>
+      </td>
+      <td style="vertical-align: top;">Windows<br><table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2"><tbody><tr><td style="vertical-align: top;">,oJ<br></td><td style="vertical-align: top;">Split window, open test in other window<br></td></tr><tr><td style="vertical-align: top;"><br></td><td style="vertical-align: top;"><br></td></tr><tr><td style="vertical-align: top;"><br></td><td style="vertical-align: top;"><br></td></tr></tbody></table><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><br>
+      </td>
+      <td style="vertical-align: top;"><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<table style="border: thin none black; border-spacing: 2px;" border="1">
+  <tbody>
+    <tr>
+      <th>Key</th>
+      <th>Command</th>
+    </tr>
+    <tr>
+      <td>,b</td>
+      <td>Next buffer</td>
+    </tr>
+    <tr>
+      <td>,B</td>
+      <td>Previous buffer</td>
+    </tr>
+    <tr>
+      <td>,oJ</td>
+      <td>Split window, open corresponding test file in lower half</td>
+    </tr>
+    <tr>
+      <td>freespec C-\</td>
+      <td>Expand to a template for a ScalaTest Freespec</td>
+    </tr>
+    <tr>
+      <td>C-]</td>
+      <td>Jump to definition of tag under cursor</td>
+    </tr>
+    <tr>
+      <td>C-t</td>
+      <td>Jump back to point before jumping to definition</td>
+    </tr>
+    <tr>
+      <td>:tag XXX</td>
+      <td>Jump to definition of symbol XXX</td>
+    </tr>
+    <tr>
+      <td>\ff</td>
+      <td>Jump to location of first compile error</td>
+    </tr>
+    <tr>
+      <td>C-n</td>
+      <td>Toggle NERDTree window</td>
+    </tr>
+    <tr>
+      <td>,cd</td>
+      <td>Change working directory to directory of current file</td>
+    </tr>
+    <tr>
+      <td>,sw</td>
+      <td>Size current window to fit lines in file (for small files)</td>
+    </tr>
+    <tr>
+      <td>,g</td>
+      <td>Prompt to grep in subdirectories for a pattern (:Grep)</td>
+    </tr>
+    <tr>
+      <td>C-w-</td>
+      <td>Make current window smaller by one line (prefix with number
+to do that many lines)</td>
+    </tr>
+    <tr>
+      <td>C-w+</td>
+      <td>Make current window larget by one line (prefix with number to
+do that many lines)</td>
+    </tr>
+    <tr>
+      <td>C-w+</td>
+      <td>Make current window larget by one line (prefix with number to
+do that many lines)</td>
+    </tr>
+    <tr>
+      <td>:new xxx</td>
+      <td>Open file xxx in a new window. Prefix with number to make new
+window that many lines</td>
+    </tr>
+    <tr>
+      <td>C-w=</td>
+      <td>Make all windows the same size</td>
+    </tr>
+    <tr>
+      <td>:buffers</td>
+      <td>List all current buffers</td>
+    </tr>
+    <tr>
+      <td>&lt;f3&gt;<br>
+      </td>
+      <td>Pass current file through Scalariform, formatting it
+(:Autoformat)</td>
+    </tr>
+  </tbody>
+</table>
+<h4>Tmux</h4>
+<table border="1">
+  <tbody>
+    <tr>
+      <td>C-a C-up, C-a C-down, C-a C-left, C-a C-right</td>
+      <td>resize by 1 row/column</td>
+    </tr>
+    <tr>
+      <td>tmux new-session -s work</td>
+      <td>Start a new session</td>
+    </tr>
+    <tr>
+      <td>tmux attach -t work</td>
+      <td>Attach to an existing session</td>
+    </tr>
+    <tr>
+      <td>C-a $</td>
+      <td>rename the current session</td>
+    </tr>
+    <tr>
+      <td>C-a (</td>
+      <td>previous session</td>
+    </tr>
+    <tr>
+      <td>C-a )</td>
+      <td>next session</td>
+    </tr>
+    <tr>
+      <td>C-a L</td>
+      <td>last (previously used) session</td>
+    </tr>
+    <tr>
+      <td>C-a s</td>
+      <td>choose a session from a list</td>
+    </tr>
+    <tr>
+      <td>C-a c</td>
+      <td>create a new window</td>
+    </tr>
+    <tr>
+      <td>C-a 1 ...</td>
+      <td>switch to window 1, ..., 9, 0</td>
+    </tr>
+    <tr>
+      <td>C-a p</td>
+      <td>previous window</td>
+    </tr>
+    <tr>
+      <td>C-a n</td>
+      <td>next window</td>
+    </tr>
+    <tr>
+      <td>C-a l</td>
+      <td>last (previously used) window</td>
+    </tr>
+    <tr>
+      <td>C-a w</td>
+      <td>choose window from a list</td>
+    </tr>
+    <tr>
+      <td>C-a left</td>
+      <td>go to the next pane on the left</td>
+    </tr>
+    <tr>
+      <td>C-a right</td>
+      <td>(or one of these other directions)</td>
+    </tr>
+    <tr>
+      <td>C-a o</td>
+      <td>go to the next pane (cycle through all of them)</td>
+    </tr>
+    <tr>
+      <td>C-a ;</td>
+      <td>go to the last (previously used) pane</td>
+    </tr>
+    <tr>
+      <td>C-a o</td>
+      <td>Switch to other pane</td>
+    </tr>
+    <tr>
+      <td>C-a M-down</td>
+      <td>Make current pane 5 lines smaller</td>
+    </tr>
+    <tr>
+      <td>C-a "</td>
+      <td>Split vertically</td>
+    </tr>
+    <tr>
+      <td>C-a %</td>
+      <td>Split horizontally</td>
+    </tr>
+  </tbody>
+</table>

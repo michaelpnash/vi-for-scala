@@ -80,12 +80,12 @@ nmap <silent> ,oJ :FSSplitBelow<CR>
 au FileType scala let b:fswitchdst = 'scala'
 
 " Matches scala files that do not end with Test.scala
-au BufEnter *\(Test\)\@!.scala let b:fswitchlocs = 'reg:+/main/scala+/test/scala/+' | let b:fswitchfnames='/$/Test/'
+au BufEnter *\(Test\)\@!.scala let b:fswitchlocs = 'reg:+/app/scala+/test/scala/+' | let b:fswitchfnames='/$/Test/'
 
 " Matches scala files that do end with Test.scala
 au BufEnter *Test.scala let b:fswitchlocs = 'reg:+/test/scala+/main/scala/+' | let b:fswitchfnames='/Test$//'
 
-let b:fswitchlocs = 'reg:/main/test/'
+let b:fswitchlocs = 'reg:/app/test/'
 filetype plugin on
 set runtimepath+=~/.vim/xpt-personal
 let Grep_Default_Filelist = './**/*.scala'
