@@ -57,6 +57,7 @@ nmap <silent> ,md :!mkdir -p %:p:h<CR>
 nmap <silent> ,n :nohls<CR>
 nmap <silent> ,b :bnext<CR>
 nmap <silent> ,B :bprevious<CR>
+nmap <C-P> :CtrlPMixed<CR>
 
 nmap <silent> ,qq :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 

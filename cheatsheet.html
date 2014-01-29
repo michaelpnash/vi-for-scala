@@ -25,15 +25,15 @@ Key bindings for my Vi setup for editing Scala, <a href="https://github.com/mich
         </tbody>
       </table>
       </td>
-      <td style="vertical-align: top;">Windows<br><table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2"><tbody><tr><td style="vertical-align: top;">,oJ<br></td><td style="vertical-align: top;">Split window, open test in other window<br></td></tr><tr><td style="vertical-align: top;"><br></td><td style="vertical-align: top;"><br></td></tr><tr><td style="vertical-align: top;"><br></td><td style="vertical-align: top;"><br></td></tr></tbody></table><br>
+      <td style="vertical-align: top;"><div style="text-align: center;"><span style="font-weight: bold;">Windows</span><br></div><table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2"><tbody><tr><td style="vertical-align: top;">,oJ<br></td><td style="vertical-align: top;">Split window, open test in other window<br></td></tr><tr><td style="vertical-align: top;">:split<br></td><td style="vertical-align: top;">Split window<br></td></tr><tr><td style="vertical-align: top;">,sw<br></td><td style="vertical-align: top;">Size current window to fit lines in file (for small files)</td></tr><tr><td style="vertical-align: top;">C-w=</td><td style="vertical-align: top;">Make all windows the same size</td></tr><tr><td style="vertical-align: top;">C-w-<br></td><td style="vertical-align: top;">Make current window smaller by one line (can prefix with number)<br></td></tr><tr><td style="vertical-align: top;">C-w+<br></td><td style="vertical-align: top;">Make current window larger by one line (can prefix with number)<br></td></tr><tr><td style="vertical-align: top;">:new XXX<br></td><td style="vertical-align: top;">Open file xxx in new window. Prefix with number to set size of window<br></td></tr></tbody></table><br>
       </td>
     </tr>
     <tr>
-      <td style="vertical-align: top;"><br>
+      <td style="vertical-align: top;"><div style="text-align: center;"><span style="font-weight: bold;">QuickFix</span><br></div><table style="text-align: left; width: 285px; height: 100px;" border="1" cellpadding="2" cellspacing="2"><tbody><tr><td style="vertical-align: top;">\ff<br></td><td style="vertical-align: top;">Jump to first compile error<br></td></tr><tr><td style="vertical-align: top;">\fn<br></td><td style="vertical-align: top;">Jump to next compile error<br></td></tr></tbody></table><br>
       </td>
-      <td style="vertical-align: top;"><br>
+      <td style="vertical-align: top;"><div style="text-align: center;"><span style="font-weight: bold;">Tags</span><br></div><table style="text-align: left; width: 452px; height: 140px;" border="1" cellpadding="2" cellspacing="2"><tbody><tr><td style="vertical-align: top;">:tag XXX<br></td><td style="vertical-align: top;">Jump to definition of symbol XXX<br></td></tr><tr><td style="vertical-align: top;">C-]<br></td><td style="vertical-align: top;">Jump to definition of tag under cursor<br></td></tr><tr><td style="vertical-align: top;">C-t<br></td><td style="vertical-align: top;">Jump back to point before jumping to definition<br></td></tr></tbody></table><br>
       </td>
-    </tr>
+    </tr><tr><td style="vertical-align: top;"><div style="text-align: center;"><span style="font-weight: bold;">NERDTree</span><br></div><table style="text-align: left; width: 280px; height: 68px;" border="1" cellpadding="2" cellspacing="2"><tbody><tr><td style="vertical-align: top;">freespec C-\<br></td><td style="vertical-align: top;">ScalaTest Freespec<br></td></tr><tr><td style="vertical-align: top;">C-n<br></td><td style="vertical-align: top;">Toggle NERDTree window<br></td></tr></tbody></table><br></td><td style="vertical-align: top;">Control-P<br><table style="text-align: left; width: 100px;" border="1" cellpadding="2" cellspacing="2"><tbody><tr><td style="vertical-align: top;"><br></td><td style="vertical-align: top;"><br></td></tr><tr><td style="vertical-align: top;"><br></td><td style="vertical-align: top;"><br></td></tr><tr><td style="vertical-align: top;"><br></td><td style="vertical-align: top;"><br></td></tr></tbody></table><br></td></tr>
   </tbody>
 </table>
 <br>
@@ -43,82 +43,30 @@ Key bindings for my Vi setup for editing Scala, <a href="https://github.com/mich
       <th>Key</th>
       <th>Command</th>
     </tr>
-    <tr>
-      <td>,b</td>
-      <td>Next buffer</td>
-    </tr>
-    <tr>
-      <td>,B</td>
-      <td>Previous buffer</td>
-    </tr>
-    <tr>
-      <td>,oJ</td>
-      <td>Split window, open corresponding test file in lower half</td>
-    </tr>
-    <tr>
-      <td>freespec C-\</td>
-      <td>Expand to a template for a ScalaTest Freespec</td>
-    </tr>
-    <tr>
-      <td>C-]</td>
-      <td>Jump to definition of tag under cursor</td>
-    </tr>
-    <tr>
-      <td>C-t</td>
-      <td>Jump back to point before jumping to definition</td>
-    </tr>
-    <tr>
-      <td>:tag XXX</td>
-      <td>Jump to definition of symbol XXX</td>
-    </tr>
-    <tr>
-      <td>\ff</td>
-      <td>Jump to location of first compile error</td>
-    </tr>
-    <tr>
-      <td>C-n</td>
-      <td>Toggle NERDTree window</td>
-    </tr>
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <tr>
       <td>,cd</td>
       <td>Change working directory to directory of current file</td>
     </tr>
-    <tr>
-      <td>,sw</td>
-      <td>Size current window to fit lines in file (for small files)</td>
-    </tr>
+    
     <tr>
       <td>,g</td>
       <td>Prompt to grep in subdirectories for a pattern (:Grep)</td>
     </tr>
-    <tr>
-      <td>C-w-</td>
-      <td>Make current window smaller by one line (prefix with number
-to do that many lines)</td>
-    </tr>
-    <tr>
-      <td>C-w+</td>
-      <td>Make current window larget by one line (prefix with number to
-do that many lines)</td>
-    </tr>
-    <tr>
-      <td>C-w+</td>
-      <td>Make current window larget by one line (prefix with number to
-do that many lines)</td>
-    </tr>
-    <tr>
-      <td>:new xxx</td>
-      <td>Open file xxx in a new window. Prefix with number to make new
-window that many lines</td>
-    </tr>
-    <tr>
-      <td>C-w=</td>
-      <td>Make all windows the same size</td>
-    </tr>
-    <tr>
-      <td>:buffers</td>
-      <td>List all current buffers</td>
-    </tr>
+    
+    
+    
+    
+    
+    
     <tr>
       <td>&lt;f3&gt;<br>
       </td>
@@ -127,14 +75,14 @@ window that many lines</td>
     </tr>
   </tbody>
 </table>
-<h4>Tmux</h4>
+<h4 style="text-align: center;">Tmux</h4>
 <table border="1">
   <tbody>
     <tr>
-      <td>C-a C-up, C-a C-down, C-a C-left, C-a C-right</td>
+      <td>C-a C-up, C-a C-left, C-a C-right</td>
       <td>resize by 1 row/column</td>
     </tr>
-    <tr>
+    <tr><td style="vertical-align: top;">C-a C-down<br></td><td style="vertical-align: top;">resize smaller by 1 row<br></td></tr><tr>
       <td>tmux new-session -s work</td>
       <td>Start a new session</td>
     </tr>
