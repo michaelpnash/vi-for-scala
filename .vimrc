@@ -57,6 +57,7 @@ nmap <silent> ,md :!mkdir -p %:p:h<CR>
 nmap <silent> ,n :nohls<CR>
 nmap <silent> ,b :bnext<CR>
 nmap <silent> ,B :bprevious<CR>
+nmap <C-P> :CtrlPMixed<CR>
 
 nmap <silent> ,qq :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
@@ -80,12 +81,12 @@ nmap <silent> ,oJ :FSSplitBelow<CR>
 au FileType scala let b:fswitchdst = 'scala'
 
 " Matches scala files that do not end with Test.scala
-au BufEnter *\(Test\)\@!.scala let b:fswitchlocs = 'reg:+/main/scala+/test/scala/+' | let b:fswitchfnames='/$/Test/'
+au BufEnter *\(Test\)\@!.scala let b:fswitchlocs = 'reg:+/app/scala+/test/scala/+' | let b:fswitchfnames='/$/Test/'
 
 " Matches scala files that do end with Test.scala
 au BufEnter *Test.scala let b:fswitchlocs = 'reg:+/test/scala+/main/scala/+' | let b:fswitchfnames='/Test$//'
 
-let b:fswitchlocs = 'reg:/main/test/'
+let b:fswitchlocs = 'reg:/app/test/'
 filetype plugin on
 set runtimepath+=~/.vim/xpt-personal
 let Grep_Default_Filelist = './**/*.scala'
