@@ -101,3 +101,6 @@ let g:formatprg_scala = "scalariform"
 let g:formatprg_args_scala = "--stdin --stdout"
 noremap <F3> :Autoformat<CR><CR>
 
+set cursorline
+
+ 
