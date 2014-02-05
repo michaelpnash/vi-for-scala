@@ -6,14 +6,14 @@ Key bindings for my Vi setup for editing Scala, <a href="https://github.com/mich
 <table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
   <tbody>
     <tr>
-      <td style="vertical-align: top;"><div style="text-align: center;">
-      <span style="font-weight: bold;">Buffers</span></div>
-      <table style="text-align: left; width: 100%;" title="Buffers" border="1" cellpadding="2" cellspacing="2">
+      <td style="vertical-align: top;"><div>
+      </div> <div style="text-align: center;"><span style="font-weight: bold;">Buffers</span></div>
+      <table style="text-align: left; width: 376px; height: 64px;" title="Buffers" border="1" cellpadding="2" cellspacing="2">
         <tbody>
           <tr>
             <td style="vertical-align: top;">,b<br>
             </td>
-            <td style="vertical-align: top;">Next Buffer<br>
+            <td style="vertical-align: top; text-align: left;">Next Buffer<br>
             </td>
           </tr>
           <tr>
@@ -21,35 +21,563 @@ Key bindings for my Vi setup for editing Scala, <a href="https://github.com/mich
             </td>
             <td style="vertical-align: top;">Previous Buffer<br>
             </td>
-          </tr><tr><td style="vertical-align: top;">:buffers<br></td><td style="vertical-align: top;">List all current buffers<br></td></tr>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">:buffers<br>
+            </td>
+            <td style="vertical-align: top;">List all current buffers<br>
+            </td>
+          </tr>
         </tbody>
       </table>
       </td>
-      <td style="vertical-align: top;"><div style="text-align: center;"><span style="font-weight: bold;">Windows</span><br></div><table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2"><tbody><tr><td style="vertical-align: top;">,oJ<br></td><td style="vertical-align: top;">Split window, open test in other window<br></td></tr><tr><td style="vertical-align: top;">:split<br></td><td style="vertical-align: top;">Split window<br></td></tr><tr><td style="vertical-align: top;">,sw<br></td><td style="vertical-align: top;">Size current window to fit lines in file (for small files)</td></tr><tr><td style="vertical-align: top;">C-w=</td><td style="vertical-align: top;">Make all windows the same size</td></tr><tr><td style="vertical-align: top;">C-w-<br></td><td style="vertical-align: top;">Make current window smaller by one line (can prefix with number)<br></td></tr><tr><td style="vertical-align: top;">C-w+<br></td><td style="vertical-align: top;">Make current window larger by one line (can prefix with number)<br></td></tr><tr><td style="vertical-align: top;">:new XXX<br></td><td style="vertical-align: top;">Open file xxx in new window. Prefix with number to set size of window<br></td></tr></tbody></table><br>
+      <td style="vertical-align: top;">
+      <div style="text-align: center;"><span style="font-weight: bold;">Windows</span><br>
+      </div>
+      <table style="text-align: left; width: 540px; height: 232px;" border="1" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">:split<br>
+            </td>
+            <td style="vertical-align: top;">Split window<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">,sw<br>
+            </td>
+            <td style="vertical-align: top;">Size current window to fit
+lines in file (for small files)</td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">C-w=</td>
+            <td style="vertical-align: top;">Make all windows the same
+size</td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">C-w-<br>
+            </td>
+            <td style="vertical-align: top;">Make current window
+smaller by one line (can prefix with number)<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">C-w+<br>
+            </td>
+            <td style="vertical-align: top;">Make current window larger
+by one line (can prefix with number)<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">:new XXX<br>
+            </td>
+            <td style="vertical-align: top;">Open file xxx in new
+window. Prefix with number to set size of window<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">,t<br>
+            </td>
+            <td style="vertical-align: top;">Open corresponding Test
+file in a split <span style="font-style: italic;">below</span> this
+window<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">,T<br>
+            </td>
+            <td style="vertical-align: top;">Open corresponding Test
+file in this window (new buffer)<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">,vt<br>
+            </td>
+            <td style="vertical-align: top;">Open corresponding Test
+file in a split to the <span style="font-style: italic;">right</span>
+of this window<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">,at<br>
+            </td>
+            <td style="vertical-align: top;">Open corresponding Test
+file in a split <span style="font-style: italic;">above</span> this
+window<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">,lt<br>
+            </td>
+            <td style="vertical-align: top;">Open corresponding Test
+file in a split to the <span style="font-style: italic;">left</span>
+of this window<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
       </td>
     </tr>
     <tr>
-      <td style="vertical-align: top;"><div style="text-align: center;"><span style="font-weight: bold;">QuickFix</span><br></div><table style="text-align: left; width: 285px; height: 100px;" border="1" cellpadding="2" cellspacing="2"><tbody><tr><td style="vertical-align: top;">\ff<br></td><td style="vertical-align: top;">Jump to first compile error<br></td></tr><tr><td style="vertical-align: top;">\fn<br></td><td style="vertical-align: top;">Jump to next compile error<br></td></tr></tbody></table><br>
+      <td style="vertical-align: top;">
+      <div style="text-align: center;"><span style="font-weight: bold;">QuickFix</span><br>
+      </div>
+      <table style="text-align: left; width: 374px; height: 100px;" border="1" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">\ff<br>
+            </td>
+            <td style="vertical-align: top;">Jump to first compile error<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">\fn<br>
+            </td>
+            <td style="vertical-align: top;">Jump to next compile error<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">:cope [n]<br>
+            </td>
+            <td style="vertical-align: top;">Open window with list of
+errors. n is optional window height<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">:ccl<br>
+            </td>
+            <td style="vertical-align: top;">Close list of errors<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
       </td>
-      <td style="vertical-align: top;"><div style="text-align: center;"><span style="font-weight: bold;">Tags</span><br></div><table style="text-align: left; width: 532px; height: 140px;" border="1" cellpadding="2" cellspacing="2"><tbody><tr><td style="vertical-align: top;">:tag XXX<br></td><td style="vertical-align: top;">Jump to definition of symbol XXX<br></td></tr><tr><td style="vertical-align: top;">C-]<br></td><td style="vertical-align: top;">Jump to definition of tag under cursor<br></td></tr><tr><td style="vertical-align: top;">C-t<br></td><td style="vertical-align: top;">Jump back to point before jumping to definition<br></td></tr></tbody></table><br>
+      <td style="vertical-align: top;">
+      <div style="text-align: center;"><span style="font-weight: bold;">Tags</span><br>
+      </div>
+      <table style="text-align: left; width: 532px; height: 140px;" border="1" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">:tag XXX<br>
+            </td>
+            <td style="vertical-align: top;">Jump to definition of
+symbol XXX<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">C-]<br>
+            </td>
+            <td style="vertical-align: top;">Jump to definition of tag
+under cursor<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">C-t<br>
+            </td>
+            <td style="vertical-align: top;">Jump back to point before
+jumping to definition<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
       </td>
-    </tr><tr><td style="vertical-align: top;"><div style="text-align: center;"><span style="font-weight: bold;">NERDTree</span><br></div><table style="text-align: left; width: 385px; height: 1092px;" border="1" cellpadding="2" cellspacing="2"><tbody><tr><td style="vertical-align: top;">freespec C-\<br></td><td style="vertical-align: top;">ScalaTest Freespec<br></td></tr><tr><td style="vertical-align: top;">C-n<br></td><td style="vertical-align: top;">Toggle NERDTree window<br></td></tr><tr><td style="vertical-align: top;">r<br></td><td style="vertical-align: top;">Refresh current dir<br></td></tr><tr><td style="vertical-align: top;">R<br></td><td style="vertical-align: top;">Refresh from root dir<br></td></tr><tr><td style="vertical-align: top;">P<br></td><td style="vertical-align: top;">Jump to root node<br></td></tr><tr><td style="vertical-align: top;">o/RETURN<br></td><td style="vertical-align: top;">Open file, dir or bookmark<br></td></tr><tr><td style="vertical-align: top;">go<br></td><td style="vertical-align: top;">Open, but cursor stays in tree<br></td></tr><tr><td style="vertical-align: top;">t<br></td><td style="vertical-align: top;">Open in new tab<br></td></tr><tr><td style="vertical-align: top;">T<br></td><td style="vertical-align: top;">Like t, but focus stays on current tab<br></td></tr><tr><td style="vertical-align: top;">i<br></td><td style="vertical-align: top;">Open in split window<br></td></tr><tr><td style="vertical-align: top;">gi<br></td><td style="vertical-align: top;">Same as i, but cursor stays in tree<br></td></tr><tr><td style="vertical-align: top;">s<br></td><td style="vertical-align: top;">Open in vsplit<br></td></tr><tr><td style="vertical-align: top;">gs<br></td><td style="vertical-align: top;">Same as s, but cursor stays in tree<br></td></tr><tr><td style="vertical-align: top;">O<br></td><td style="vertical-align: top;">Recursively open selected dir<br></td></tr><tr><td style="vertical-align: top;">x<br></td><td style="vertical-align: top;">Close current nodes parent<br></td></tr><tr><td style="vertical-align: top;">X<br></td><td style="vertical-align: top;">Recursively close all children of current node<br></td></tr><tr><td style="vertical-align: top;">e<br></td><td style="vertical-align: top;">Edit curent dir<br></td></tr><tr><td style="vertical-align: top;">D<br></td><td style="vertical-align: top;">Delete current bookmark<br></td></tr><tr><td style="vertical-align: top;">p<br></td><td style="vertical-align: top;">Jump to current roots parent<br></td></tr><tr><td style="vertical-align: top;">K<br></td><td style="vertical-align: top;">Jump up inside dirs at current depth<br></td></tr><tr><td style="vertical-align: top;">J<br></td><td style="vertical-align: top;">Jump down inside dirs at current depth<br></td></tr><tr><td style="vertical-align: top;">C-J<br></td><td style="vertical-align: top;">Jump down to next sibling of current dir<br></td></tr><tr><td style="vertical-align: top;">C-K<br></td><td style="vertical-align: top;">Jump up to prev sibling of current dir<br></td></tr><tr><td style="vertical-align: top;">C<br></td><td style="vertical-align: top;">Change root to selected dir<br></td></tr><tr><td style="vertical-align: top;">u<br></td><td style="vertical-align: top;">Move tree root up one dir<br></td></tr><tr><td style="vertical-align: top;">U<br></td><td style="vertical-align: top;">Same as u, but old root left open<br></td></tr><tr><td style="vertical-align: top;">m<br></td><td style="vertical-align: top;">Display action menu<br></td></tr><tr><td style="vertical-align: top;">cd<br></td><td style="vertical-align: top;">Change cwd to dir of selected node<br></td></tr><tr><td style="vertical-align: top;">CD<br></td><td style="vertical-align: top;">Change root to dir of current node<br></td></tr><tr><td style="vertical-align: top;">I<br></td><td style="vertical-align: top;">Toggle hidden files<br></td></tr><tr><td style="vertical-align: top;">f<br></td><td style="vertical-align: top;">Toggle file filters<br></td></tr><tr><td style="vertical-align: top;">F<br></td><td style="vertical-align: top;">Toggle display of files<br></td></tr><tr><td style="vertical-align: top;">B<br></td><td style="vertical-align: top;">Toogle bookmark table<br></td></tr><tr><td style="vertical-align: top;">q<br></td><td style="vertical-align: top;">Close NERDTree window<br></td></tr><tr><td style="vertical-align: top;">A<br></td><td style="vertical-align: top;">Maximize NERDTree window<br></td></tr><tr><td style="vertical-align: top;">?<br></td><td style="vertical-align: top;">Quick help<br></td></tr></tbody></table><br></td><td style="vertical-align: top;"><div style="text-align: center;"><span style="font-weight: bold;">Control-P</span><br></div><table style="text-align: left; width: 547px; height: 340px;" border="1" cellpadding="2" cellspacing="2"><tbody><tr><td style="vertical-align: top;">C-p<br></td><td style="vertical-align: top;">Invoke in file mode<br></td></tr><tr><td style="vertical-align: top;">C-P<br></td><td style="vertical-align: top;">Invoke in mixed mode (files, buffers, MRU)<br></td></tr><tr><td style="vertical-align: top;">&lt;f5&gt;<br></td><td style="vertical-align: top;">Purge cache<br></td></tr><tr><td style="vertical-align: top;">C-f/C-n<br></td><td style="vertical-align: top;">Cycle through modes<br></td></tr><tr><td style="vertical-align: top;">C-d<br></td><td style="vertical-align: top;">Filename-only mode (instead of full path)<br></td></tr><tr><td style="vertical-align: top;">C-r<br></td><td style="vertical-align: top;">Regex mode<br></td></tr><tr><td style="vertical-align: top;">C-j/C-k<br></td><td style="vertical-align: top;">Navigate result list<br></td></tr><tr><td style="vertical-align: top;">C-t/C-v/C-x<br></td><td style="vertical-align: top;">Open selected entry in new tab or new split<br></td></tr><tr><td style="vertical-align: top;">C-n/C-p<br></td><td style="vertical-align: top;">Next/Prev prompt history<br></td></tr><tr><td style="vertical-align: top;">C-y<br></td><td style="vertical-align: top;">Create new file and parent dirs<br></td></tr><tr><td style="vertical-align: top;">C-z</td><td style="vertical-align: top;">Mark/Unmark multiple files<br></td></tr><tr><td style="vertical-align: top;">C-o<br></td><td style="vertical-align: top;">Open marked files<br></td></tr></tbody></table><br><div style="text-align: center;"><span style="font-weight: bold;">Miscellaneous</span><br><span style="font-weight: bold;"></span></div><table style="text-align: left; width: 514px; height: 116px;" border="1" cellpadding="2" cellspacing="2"><tbody><tr><td style="vertical-align: top;">,cd<br></td><td style="vertical-align: top;">Change cwd to dir of current file<br></td></tr><tr><td style="vertical-align: top;">,g<br></td><td style="vertical-align: top;">Prompt to grep in subdirectories for a pattern (:Grep)</td></tr><tr><td style="vertical-align: top;">&lt;f3&gt;<br></td><td style="vertical-align: top;">Pass current file through Scalariform, formatting it
-(:Autoformat)</td></tr></tbody></table><span style="font-weight: bold;"><br></span></td></tr>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">
+      <div style="text-align: center;"><span style="font-weight: bold;">NERDTree</span><br>
+      </div>
+      <table style="text-align: left; width: 385px; height: 1092px;" border="1" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">freespec C-\<br>
+            </td>
+            <td style="vertical-align: top;">ScalaTest Freespec<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">C-n<br>
+            </td>
+            <td style="vertical-align: top;">Toggle NERDTree window<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">r<br>
+            </td>
+            <td style="vertical-align: top;">Refresh current dir<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">R<br>
+            </td>
+            <td style="vertical-align: top;">Refresh from root dir<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">P<br>
+            </td>
+            <td style="vertical-align: top;">Jump to root node<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">o/RETURN<br>
+            </td>
+            <td style="vertical-align: top;">Open file, dir or bookmark<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">go<br>
+            </td>
+            <td style="vertical-align: top;">Open, but cursor stays in
+tree<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">t<br>
+            </td>
+            <td style="vertical-align: top;">Open in new tab<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">T<br>
+            </td>
+            <td style="vertical-align: top;">Like t, but focus stays on
+current tab<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">i<br>
+            </td>
+            <td style="vertical-align: top;">Open in split window<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">gi<br>
+            </td>
+            <td style="vertical-align: top;">Same as i, but cursor
+stays in tree<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">s<br>
+            </td>
+            <td style="vertical-align: top;">Open in vsplit<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">gs<br>
+            </td>
+            <td style="vertical-align: top;">Same as s, but cursor
+stays in tree<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">O<br>
+            </td>
+            <td style="vertical-align: top;">Recursively open selected
+dir<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">x<br>
+            </td>
+            <td style="vertical-align: top;">Close current nodes parent<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">X<br>
+            </td>
+            <td style="vertical-align: top;">Recursively close all
+children of current node<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">e<br>
+            </td>
+            <td style="vertical-align: top;">Edit curent dir<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">D<br>
+            </td>
+            <td style="vertical-align: top;">Delete current bookmark<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">p<br>
+            </td>
+            <td style="vertical-align: top;">Jump to current roots
+parent<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">K<br>
+            </td>
+            <td style="vertical-align: top;">Jump up inside dirs at
+current depth<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">J<br>
+            </td>
+            <td style="vertical-align: top;">Jump down inside dirs at
+current depth<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">C-J<br>
+            </td>
+            <td style="vertical-align: top;">Jump down to next sibling
+of current dir<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">C-K<br>
+            </td>
+            <td style="vertical-align: top;">Jump up to prev sibling of
+current dir<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">C<br>
+            </td>
+            <td style="vertical-align: top;">Change root to selected dir<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">u<br>
+            </td>
+            <td style="vertical-align: top;">Move tree root up one dir<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">U<br>
+            </td>
+            <td style="vertical-align: top;">Same as u, but old root
+left open<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">m<br>
+            </td>
+            <td style="vertical-align: top;">Display action menu<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">cd<br>
+            </td>
+            <td style="vertical-align: top;">Change cwd to dir of
+selected node<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">CD<br>
+            </td>
+            <td style="vertical-align: top;">Change root to dir of
+current node<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">I<br>
+            </td>
+            <td style="vertical-align: top;">Toggle hidden files<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">f<br>
+            </td>
+            <td style="vertical-align: top;">Toggle file filters<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">F<br>
+            </td>
+            <td style="vertical-align: top;">Toggle display of files<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">B<br>
+            </td>
+            <td style="vertical-align: top;">Toogle bookmark table<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">q<br>
+            </td>
+            <td style="vertical-align: top;">Close NERDTree window<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">A<br>
+            </td>
+            <td style="vertical-align: top;">Maximize NERDTree window<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">?<br>
+            </td>
+            <td style="vertical-align: top;">Quick help<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      </td>
+      <td style="vertical-align: top;">
+      <div style="text-align: center;"><span style="font-weight: bold;">Control-P</span><br>
+      </div>
+      <table style="text-align: left; width: 547px; height: 340px;" border="1" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">C-p<br>
+            </td>
+            <td style="vertical-align: top;">Invoke in file mode<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">C-P<br>
+            </td>
+            <td style="vertical-align: top;">Invoke in mixed mode
+(files, buffers, MRU)<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">&lt;f5&gt;<br>
+            </td>
+            <td style="vertical-align: top;">Purge cache<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">C-f/C-n<br>
+            </td>
+            <td style="vertical-align: top;">Cycle through modes<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">C-d<br>
+            </td>
+            <td style="vertical-align: top;">Filename-only mode
+(instead of full path)<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">C-r<br>
+            </td>
+            <td style="vertical-align: top;">Regex mode<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">C-j/C-k<br>
+            </td>
+            <td style="vertical-align: top;">Navigate result list<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">C-t/C-v/C-x<br>
+            </td>
+            <td style="vertical-align: top;">Open selected entry in new
+tab or new split<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">C-n/C-p<br>
+            </td>
+            <td style="vertical-align: top;">Next/Prev prompt history<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">C-y<br>
+            </td>
+            <td style="vertical-align: top;">Create new file and parent
+dirs<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">C-z</td>
+            <td style="vertical-align: top;">Mark/Unmark multiple files<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">C-o<br>
+            </td>
+            <td style="vertical-align: top;">Open marked files<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <div style="text-align: center;"><span style="font-weight: bold;">Miscellaneous</span><br>
+      <span style="font-weight: bold;"></span></div>
+      <table style="text-align: left; width: 514px; height: 116px;" border="1" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">,cd<br>
+            </td>
+            <td style="vertical-align: top;">Change cwd to dir of
+current file<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">,g<br>
+            </td>
+            <td style="vertical-align: top;">Prompt to grep in
+subdirectories for a pattern (:Grep)</td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">&lt;f3&gt;<br>
+            </td>
+            <td style="vertical-align: top;">Pass current file through
+Scalariform, formatting it
+(:Autoformat)</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <div style="text-align: center;"><span style="font-weight: bold;">XTemplate</span><br>
+      </div>
+      <table style="text-align: left; width: 492px; height: 100px;" border="1" cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">freespec C-\<br>
+            </td>
+            <td style="vertical-align: top;">Insert ScalaTest FreeSpec
+template<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;"><br>
+            </td>
+            <td style="vertical-align: top;"><br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <span style="font-weight: bold;"></span></td>
+    </tr>
   </tbody>
 </table>
-<br><h4 style="text-align: center;">Tmux</h4>
+<br>
+<h4 style="text-align: center;">Tmux</h4>
 <table border="1">
   <tbody>
     <tr>
       <td>C-a C-up, C-a C-left, C-a C-right</td>
       <td>resize by 1 row/column</td>
     </tr>
-    <tr><td style="vertical-align: top;">C-a C-down<br></td><td style="vertical-align: top;">resize smaller by 1 row<br></td></tr><tr>
+    <tr>
+      <td style="vertical-align: top;">C-a C-down<br>
+      </td>
+      <td style="vertical-align: top;">resize smaller by 1 row<br>
+      </td>
+    </tr>
+    <tr>
       <td>tmux new-session -s work</td>
       <td>Start a new session</td>
     </tr>
     <tr>
-      <td>tmux attach -t work</td>
+      <td>tmux attach-session -t work</td>
       <td>Attach to an existing session</td>
     </tr>
     <tr>
@@ -127,6 +655,13 @@ Key bindings for my Vi setup for editing Scala, <a href="https://github.com/mich
     <tr>
       <td>C-a %</td>
       <td>Split horizontally</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">C-a [<br>
+      </td>
+      <td style="vertical-align: top;">Enter scroll mode (j/k to move
+up/down, RETURN to exit)<br>
+      </td>
     </tr>
   </tbody>
 </table>

@@ -68,23 +68,27 @@ nnoremap <C-E> ,
 "-----------------------------------------------------------------------------
 " FSwitch mappings
 "-----------------------------------------------------------------------------
-nmap <silent> ,of :FSHere<CR>
+nmap <silent> ,T :FSHere<CR>
 nmap <silent> ,ol :FSRight<CR>
-nmap <silent> ,oL :FSSplitRight<CR>
+nmap <silent> ,vt :FSSplitRight<CR>
 nmap <silent> ,oh :FSLeft<CR>
-nmap <silent> ,oH :FSSplitLeft<CR>
+nmap <silent> ,lt :FSSplitLeft<CR>
 nmap <silent> ,ok :FSAbove<CR>
-nmap <silent> ,oK :FSSplitAbove<CR>
-nmap <silent> ,oj :FSBelow<CR>
-nmap <silent> ,oJ :FSSplitBelow<CR>
+nmap <silent> ,at :FSSplitAbove<CR>
+nmap <silent> ,T :FSBelow<CR>
+nmap <silent> ,t :FSSplitBelow<CR>
 
 au FileType scala let b:fswitchdst = 'scala'
 
 " Matches scala files that do not end with Test.scala
-au BufEnter *\(Test\)\@!.scala let b:fswitchlocs = 'reg:+/app/scala+/test/scala/+' | let b:fswitchfnames='/$/Test/'
+au BufEnter *\(Test\)\@!.scala let b:fswitchlocs = 'reg:+/app/+/test/+' | let b:fswitchfnames='/$/Test/'
+" Use the one below if you're dealing with a Scala app with src/main/scala and
+" src/test/scala intead of app and test directories (like Play)
+" au BufEnter *\(Test\)\@!.scala let b:fswitchlocs = 'reg:+/src/main/scala+/src/test/scala/+' | let b:fswitchfnames='/$/Test/'
 
 " Matches scala files that do end with Test.scala
-au BufEnter *Test.scala let b:fswitchlocs = 'reg:+/test/scala+/main/scala/+' | let b:fswitchfnames='/Test$//'
+au BufEnter *Test.scala let b:fswitchlocs = 'reg:+/test/+/app/+' | let b:fswitchfnames='/Test$//'
+" au BufEnter *Test.scala let b:fswitchlocs = 'reg:+/src/test/scala+/src/main/scala/+' | let b:fswitchfnames='/Test$//'
 
 let b:fswitchlocs = 'reg:/app/test/'
 filetype plugin on
