@@ -108,4 +108,44 @@ noremap <F3> :Autoformat<CR><CR>
 
 set cursorline
 
- 
+" Highlight where we go over 80 columns
+highlight ColorColumn ctermbg=magenta
+call matchadd('ColorColumn', '\%81v', 100)
+
+highlight WhiteOnRed ctermbg=red guibg=darkred
+
+    " This rewires n and N to do the highlighing...
+    nnoremap <silent> n   n:call HLNext(0.4)<cr>
+    nnoremap <silent> N   N:call HLNext(0.4)<cr>
+    "
+    " OR ELSE just highlight the match in red...
+    function! HLNext (blinktime)
+        let [bufnum, lnum, col, off] = getpos('.')
+        let matchlen = strlen(matchstr(strpart(getline('.'),col-1),@/))
+        let target_pat = '\c\%#'.@/
+        let ring = matchadd('WhiteOnRed', target_pat, 101)
+        redraw
+        exec 'sleep ' . float2nr(a:blinktime * 1000) . 'm'
+        call matchdelete(ring)
+        redraw
+    endfunction
+
+    exec "set listchars=tab:\uBB\uBB,trail:\uB7,nbsp:~"
+    set list
+
+" This is a bit twitchy, so use at your own risk
+    nnoremap  ;  :
+    nnoremap  :  ;
+
+    vmap  <expr>  <LEFT>   DVB_Drag('left')
+    vmap  <expr>  <RIGHT>  DVB_Drag('right')
+    vmap  <expr>  <DOWN>   DVB_Drag('down')
+    vmap  <expr>  <UP>     DVB_Drag('up')
+    vmap  <expr>  D        DVB_Duplicate()
+
+    nnoremap    v   <C-V>
+    nnoremap <C-V>     v
+
+    vnoremap    v   <C-V>
+    vnoremap <C-V>     v
+
