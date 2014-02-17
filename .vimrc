@@ -36,7 +36,7 @@ call pathogen#incubate()
 call pathogen#helptags()
 filetype on
 set foldlevelstart=20
-map <C-n> :NERDTreeToggle<CR>
+map <C-n> ;NERDTreeToggle<CR>
 set incsearch
 set hlsearch
 let g:ctrlp_max_files=0
