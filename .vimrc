@@ -134,8 +134,8 @@ highlight WhiteOnRed ctermbg=red guibg=darkred
     set list
 
 " This is a bit twitchy, so use at your own risk
-    nnoremap  ;  :
-    nnoremap  :  ;
+"    nnoremap  ;  :
+"    nnoremap  :  ;
 
     vmap  <expr>  <LEFT>   DVB_Drag('left')
     vmap  <expr>  <RIGHT>  DVB_Drag('right')
