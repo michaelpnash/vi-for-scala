@@ -36,7 +36,7 @@ call pathogen#incubate()
 call pathogen#helptags()
 filetype on
 set foldlevelstart=20
-map <C-n> ;NERDTreeToggle<CR>
+map <C-n> :NERDTreeToggle<CR>
 set incsearch
 set hlsearch
 let g:ctrlp_max_files=0
@@ -52,12 +52,12 @@ set nobackup
 set nowritebackup
 set noswapfile
 
-nmap <silent> ,cd ;lcd %:h<CR>
-nmap <silent> ,md ;!mkdir -p %:p:h<CR>
-nmap <silent> ,n ;nohls<CR>
-nmap <silent> ,b ;bnext<CR>
-nmap <silent> ,B ;bprevious<CR>
-nmap <C-P> ;CtrlPMixed<CR>
+nmap <silent> ,cd :lcd %:h<CR>
+nmap <silent> ,md :!mkdir -p %:p:h<CR>
+nmap <silent> ,n :nohls<CR>
+nmap <silent> ,b :bnext<CR>
+nmap <silent> ,B :bprevious<CR>
+nmap <C-P> :CtrlP:ixed<CR>
 
 nmap <silent> ,qq :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
