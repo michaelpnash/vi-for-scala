@@ -44,6 +44,7 @@ let g:ctrlp_max_depth=40
 let g:ctrlp_working_path_mode=''
 let g:ctrlp_working_path_mode = 'r'
 let g:ctrlp_by_filename = 1
+let g:ctrlp_custom_ignore = 'dgrid\|dijit\|dojo\|dojox\|put-selector\|xstyle\|DS_Store\|git'
 set vb " visual bell
 set wildmenu
 set autoread
