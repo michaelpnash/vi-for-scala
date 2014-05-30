@@ -6,6 +6,7 @@ My VI/VIM and MC setup for developing in Scala
 Installation
 ------------
 Install Exuberant Ctags for your OS. For OSX, I use: brew install ctags-exuberant
+(See http://www.runtime-era.com/2012/05/exuberant-ctags-in-osx-107.html if that doesn't work)
 
 Copy the ctags-proj.sh script to somewhere on your PATH, like /usr/bin
 
