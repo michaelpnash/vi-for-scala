@@ -36,6 +36,7 @@ call pathogen#incubate()
 call pathogen#helptags()
 filetype on
 set foldlevelstart=20
+inoremap <C-@> <C-n>
 map <C-n> :NERDTreeToggle<CR>
 set incsearch
 set hlsearch
