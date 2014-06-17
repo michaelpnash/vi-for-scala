@@ -46,6 +46,7 @@ let g:ctrlp_max_depth=40
 let g:ctrlp_working_path_mode=''
 let g:ctrlp_working_path_mode = 'r'
 let g:ctrlp_by_filename = 1
+let g:ctrlp_custom_ignore = 'dgrid\|dijit\|dojo\|dojox\|put-selector\|xstyle\|DS_Store\|git'
 set vb " visual bell
 set wildmenu
 set autoread
@@ -164,4 +165,24 @@ noremap <silent> ,cc :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<C
 noremap <silent> ,cu :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
+
+" tabs
+set tabpagemax=10
+set showtabline=2
+nmap <F1> <Esc>1gt
+nmap <F2> <Esc>2gt
+nmap <F3> <Esc>3gt
+nmap <F4> <Esc>4gt
+nmap <F5> <Esc>5gt
+nmap <F6> <Esc>6gt
+nmap <F7> <Esc>7gt
+nmap <F8> <Esc>8gt
+nmap <F9> <Esc>9gt
+nmap <F10> <Esc>10gt
+nmap <F11> <Esc>:tabnew<CR>
+nmap <F12> <Esc>:tabc<CR>
+
+" Turn on tab bar enhancement from vim-airline
+
+let g:airline#extensions#tabline#enabled = 1
 
