@@ -175,7 +175,7 @@ function! s:MakeOptions()
         \ 'type': g:OPTION_STRING_TYPE, 
         \ 'kind': g:OPTION_DIR_NAME_KIND, 
         \ 'scope': g:OPTION_STATIC_SCOPE, 
-        \ 'value': "ensime_2.9.2-0.9.8.9",
+        \ 'value': "ensime_2.10-0.9.8.11-SNAPSHOT",
         \ 'description': [
             \ 'Name of SubDirectory of the Option "ensime_path" Directory',
             \ 'values, This Directory name will generally indicate which',
