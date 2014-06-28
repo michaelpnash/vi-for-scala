@@ -38,7 +38,7 @@ filetype on
 set foldlevelstart=20
 inoremap <C-@> <C-n>
 map <C-n> :NERDTreeToggle<CR>
-let NERDTreeMapOpenInTab='<ENTER>'
+" let NERDTreeMapOpenInTab='<ENTER>'
 set incsearch
 set hlsearch
 let g:ctrlp_max_files=0
